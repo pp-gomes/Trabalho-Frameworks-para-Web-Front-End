@@ -1,0 +1,54 @@
+/* CSS básico para uma loja virtual de estudo. */
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f2f5f7;
+  color: #203040;
+}
+[v-cloak] { display: none; }
+.cabecalho { background: #146c76; color: white; padding: 23px 15px; }
+.cabecalho-conteudo {
+  max-width: 980px; margin: auto;
+  display: flex; align-items: center; justify-content: space-between; gap: 16px;
+}
+h1 { margin: 0; font-size: 26px; }
+.subtitulo { margin: 6px 0 0; font-size: 14px; color: #e2f3f4; }
+.carrinho {
+  background: #fff; color: #125f68; border-radius: 8px;
+  padding: 12px 15px; font-weight: bold; white-space: nowrap;
+}
+.conteudo { max-width: 980px; margin: 28px auto; padding: 0 15px; }
+h2 { margin: 0 0 16px; font-size: 23px; }
+.busca-container { margin: 0 0 23px; }
+.busca-container label { display: block; font-weight: bold; margin-bottom: 7px; }
+.busca-container input {
+  width: 100%; max-width: 460px; border: 1px solid #a6b5bf;
+  border-radius: 7px; padding: 12px; font: inherit; background: white;
+}
+.busca-container input:focus { outline: 2px solid #146c76; outline-offset: 2px; }
+.grade-produtos { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 18px; }
+.produto {
+  background: white; border: 1px solid #e0e5e9; border-radius: 9px;
+  padding: 16px; display: flex; flex-direction: column;
+}
+.produto img {
+  width: 100%; height: 155px; object-fit: contain;
+  background: #f5f8f9; border-radius: 6px;
+}
+.produto h3 { font-size: 18px; margin: 14px 0 5px; }
+.descricao { font-size: 14px; color: #5c6770; margin: 0 0 11px; min-height: 36px; }
+.preco { font-size: 19px; font-weight: bold; color: #126a40; margin: auto 0 15px; }
+.produto button {
+  background: #146c76; color: white; border: 0; border-radius: 6px;
+  padding: 11px 9px; font: inherit; font-weight: bold; cursor: pointer;
+}
+.produto button:hover, .produto button:focus-visible { background: #0d4c54; }
+.sem-resultados { background: white; padding: 20px; border-radius: 7px; }
+.rodape { text-align: center; color: #606b74; font-size: 13px; padding: 20px 10px; }
+@media (max-width: 530px) {
+  .cabecalho-conteudo { flex-direction: column; align-items: flex-start; }
+  h1 { font-size: 23px; }
+  .carrinho { width: 100%; text-align: center; }
+  .grade-produtos { grid-template-columns: 1fr; }
+}
